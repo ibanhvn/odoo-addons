@@ -1,6 +1,8 @@
 # Install development environment
 ```sh
-#TODO
+apt-get update
+apt-get install git
+apt-get install vim
 ```
 ## Install git inside docker container
 ```sh
