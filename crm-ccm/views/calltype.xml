@@ -37,4 +37,3 @@
     <menuitem id="ib_calltype_list_menu" parent="ib_calltype_menu" action="ib_calltype_action" sequence="10" />   
 </data>
 </openerp>
-</xml>
