@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "crm-ccm",
+    'name': "CRM and Call Center",
 
     'summary': """
-        CRM and CCM
+        CRM and Call Center
         """,
 
     'description': """
-        This module is designed for analyzing customer relationship
+        This module is designed for managing the internal features for iBanh
     """,
 
-    'author': "iBanh JSC",
+    'author': "iBanh",
     'website': "http://www.ibanh.vn",
 
     # Categories can be used to filter modules in modules listing
