@@ -13,5 +13,9 @@ git clone https://github.com/ibanhvn/odoo-addons.git
 ```
 # Create a new Odoo module
 [Reference: Building a Module](https://www.odoo.com/documentation/9.0/howtos/backend.html)
+```sh
+# create a new module, crm-ccm as module name
+odoo.py crm-ccm odoo-addons
+```
 
 
