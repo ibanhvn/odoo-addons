@@ -2,6 +2,11 @@
 
 from openerp import models, fields, api
 
+class CallType(models.Model):
+    _name = 'ib.calltype'
+    name = fields.Char()
+    description = fields.Text()
+
 # class crm-ccm(models.Model):
 #     _name = 'crm-ccm.crm-ccm'
 
