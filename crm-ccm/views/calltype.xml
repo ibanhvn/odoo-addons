@@ -33,7 +33,6 @@
        <field name="view_mode">tree,form</field> 
     </record>
     <!-- menu items -->
-    <menuitem id="ib_calltype_menu" name="Call Type" parent="base.menu_custom" sequence="1" />        
-    <menuitem id="ib_calltype_list_menu" parent="ib_calltype_menu" action="ib_calltype_action" sequence="10" />   
+    <menuitem id="ib_calltype_list_menu" parent="ib_crm_ccm_menu" action="ib_calltype_action" sequence="10" />   
 </data>
 </openerp>
