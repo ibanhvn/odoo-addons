@@ -3,21 +3,21 @@
     'name': "crm-ccm",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        CRM and CCM
+        """,
 
     'description': """
-        Long description of module's purpose
+        This module is designed for analyzing customer relationship
     """,
 
-    'author': "My Company",
-    'website': "http://www.yourcompany.com",
+    'author': "iBanh JSC",
+    'website': "http://www.ibanh.vn",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/master/openerp/addons/base/module/module_data.xml
     # for the full list
-    'category': 'Uncategorized',
-    'version': '0.1',
+    'category': 'Sales',
+    'version': '1.0',
 
     # any module necessary for this one to work correctly
     'depends': ['base'],
@@ -32,4 +32,7 @@
     'demo': [
         'demo/demo.xml',
     ],
+    'installable': True,
+    'application': True,
+    'auto_install': False,
 }
