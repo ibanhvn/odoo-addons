@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+<data>
+    <record id="ib_config_tree" model="ir.ui.view">
+      <field name="name">ib.config.tree</field>
+      <field name="model">ib.config</field>
+      <field name="arch" type="xml">
+          <tree string="Configuration" editable="top">
+              <field name="category" />
+              <field name="key" />
+              <field name="value" />
+              <field name="description" /> 
+          </tree> 
+        </field>
+    </record>
+    <record id="ib_config_form" model="ir.ui.view">
+        <field name="name">ib.config.form</field>
+        <field name="model">ib.config</field>
+        <field name="arch" type="xml">
+           <form string="Configuration">
+               <sheet>
+                  <group name="main">
+                      <field name="category" />
+                      <field name="key" />
+                      <field name="value" />
+                      <field name="description" /> 
+                  </group> 
+               </sheet>
+           </form> 
+        </field> 
+    </record>
+    
+    <!-- actions -->
+    <record id="ib_config_action" model="ir.actions.act_window" >
+       <field name="name">Configuration</field>
+       <field name="res_model">ib.config</field>
+       <field name="view_mode">tree,form</field> 
+    </record>
+    <!-- menu items -->
+    <menuitem id="ib_config_list_menu" parent="ib_crm_ccm_menu" action="ib_config_action" sequence="10" />   
+</data>
+</openerp>

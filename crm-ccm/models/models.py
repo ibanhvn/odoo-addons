@@ -2,14 +2,11 @@
 
 from openerp import models, fields, api
 
-class CallType(models.Model):
-    _name = 'ib.calltype'
-    name = fields.Char(string='Name', required=True, translate=True)
-    description = fields.Text(string='Description', required=False, translate=True)
-
-class EvaluationType(models.Model):
-    _name = 'ib.evaluationtype'
-    name = fields.Char(string='Name', required=True, translate=True)
+class Config(models.Model):
+    _name = 'ib.config'
+    category = fields.Char(string='Category', required=True, translate=True)
+    key = fields.Char(string='Key', required=True, translate=True)
+    value = fields.Char(string='Value', required=True, translate=True)
     description = fields.Text(string='Description', required=False, translate=True)
 
 # class crm-ccm(models.Model):
