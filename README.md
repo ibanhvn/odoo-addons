@@ -95,7 +95,7 @@ class CallType(models.Model):
 </data>
 </openerp>
 ```
-- Add ``views/menus.xml` and `views/calltype.xml` to the module manifest
+- Add `views/menus.xml` and `views/calltype.xml` to the module manifest
 - `__openerp__.py`
 ```python
 # always loaded
