@@ -27,6 +27,7 @@
         # 'security/ir.model.access.csv',
         'views/menus.xml',
         'views/calltype.xml',
+        'views/evaluationtype.xml',
         'views/views.xml',
         'views/templates.xml',
     ],

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c-20170207\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-01 06:45+0000\n"
-"PO-Revision-Date: 2017-10-01 06:45+0000\n"
+"POT-Creation-Date: 2017-10-01 10:09+0000\n"
+"PO-Revision-Date: 2017-10-01 10:09+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -30,46 +30,63 @@ msgstr "Loại Cuộc Gọi"
 
 #. module: crm-ccm
 #: model:ir.model.fields,field_description:crm-ccm.field_ib_calltype_create_uid
+#: model:ir.model.fields,field_description:crm-ccm.field_ib_evaluationtype_create_uid
 msgid "Created by"
-msgstr "Người tạo"
+msgstr "Được tạo bởi"
 
 #. module: crm-ccm
 #: model:ir.model.fields,field_description:crm-ccm.field_ib_calltype_create_date
+#: model:ir.model.fields,field_description:crm-ccm.field_ib_evaluationtype_create_date
 msgid "Created on"
-msgstr "Ngày tạo"
+msgstr "Được tạo vào"
 
 #. module: crm-ccm
 #: model:ir.model.fields,field_description:crm-ccm.field_ib_calltype_description
+#: model:ir.model.fields,field_description:crm-ccm.field_ib_evaluationtype_description
 msgid "Description"
 msgstr "Miêu tả"
 
 #. module: crm-ccm
 #: model:ir.model.fields,field_description:crm-ccm.field_ib_calltype_display_name
+#: model:ir.model.fields,field_description:crm-ccm.field_ib_evaluationtype_display_name
 msgid "Display Name"
 msgstr "Tên hiển thị"
 
 #. module: crm-ccm
+#: model:ir.actions.act_window,name:crm-ccm.ib_evaluationtype_action
+#: model:ir.ui.menu,name:crm-ccm.ib_evaluationtype_list_menu
+#: model:ir.ui.view,arch_db:crm-ccm.ib_evaluationtype_form
+#: model:ir.ui.view,arch_db:crm-ccm.ib_evaluationtype_tree
+msgid "Evaluation Type"
+msgstr "Loại Đánh Giá"
+
+#. module: crm-ccm
 #: model:ir.model.fields,field_description:crm-ccm.field_ib_calltype_id
+#: model:ir.model.fields,field_description:crm-ccm.field_ib_evaluationtype_id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: crm-ccm
 #: model:ir.model.fields,field_description:crm-ccm.field_ib_calltype___last_update
+#: model:ir.model.fields,field_description:crm-ccm.field_ib_evaluationtype___last_update
 msgid "Last Modified on"
-msgstr "Ngày sửa lần cuối"
+msgstr "Sửa lần cuối vào"
 
 #. module: crm-ccm
 #: model:ir.model.fields,field_description:crm-ccm.field_ib_calltype_write_uid
+#: model:ir.model.fields,field_description:crm-ccm.field_ib_evaluationtype_write_uid
 msgid "Last Updated by"
-msgstr "Người sửa lần cuối"
+msgstr "Cập nhật lần cuối bởi"
 
 #. module: crm-ccm
 #: model:ir.model.fields,field_description:crm-ccm.field_ib_calltype_write_date
+#: model:ir.model.fields,field_description:crm-ccm.field_ib_evaluationtype_write_date
 msgid "Last Updated on"
-msgstr "Ngày cập nhật mới nhất"
+msgstr "Cập nhật lần cuối vào"
 
 #. module: crm-ccm
 #: model:ir.model.fields,field_description:crm-ccm.field_ib_calltype_name
+#: model:ir.model.fields,field_description:crm-ccm.field_ib_evaluationtype_name
 msgid "Name"
 msgstr "Tên"
 
@@ -77,4 +94,9 @@ msgstr "Tên"
 #: model:ir.model,name:crm-ccm.model_ib_calltype
 msgid "ib.calltype"
 msgstr "Loại Cuộc Gọi"
+
+#. module: crm-ccm
+#: model:ir.model,name:crm-ccm.model_ib_evaluationtype
+msgid "ib.evaluationtype"
+msgstr "Loại Đánh Giá"
 

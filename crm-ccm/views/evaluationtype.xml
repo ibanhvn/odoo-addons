@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+<data>
+    <record id="ib_evaluationtype_tree" model="ir.ui.view">
+        <field name="name">ib.evaluationtype.tree</field>
+    <field name="model">ib.evaluationtype</field>
+        <field name="arch" type="xml">
+            <tree string="Evaluation Type" editable="top">
+                <field name="name" />
+                <field name="description" /> 
+            </tree> 
+    </field>
+    </record>
+    <record id="ib_evaluationtype_form" model="ir.ui.view">
+        <field name="name">ib.evaluationtype.form</field>
+        <field name="model">ib.evaluationtype</field>
+        <field name="arch" type="xml">
+           <form string="Evaluation Type">
+               <sheet>
+                  <group name="main">
+                      <field name="name" />
+                      <field name="description" />
+                  </group> 
+               </sheet>
+           </form> 
+        </field> 
+    </record>
+    
+    <!-- actions -->
+    <record id="ib_evaluationtype_action" model="ir.actions.act_window" >
+       <field name="name">Evaluation Type</field>
+       <field name="res_model">ib.evaluationtype</field>
+       <field name="view_mode">tree,form</field> 
+    </record>
+    <!-- menu items -->
+    <menuitem id="ib_evaluationtype_list_menu" parent="ib_crm_ccm_menu" action="ib_evaluationtype_action" sequence="10" />   
+</data>
+</openerp>

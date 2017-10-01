@@ -7,6 +7,11 @@ class CallType(models.Model):
     name = fields.Char(string='Name', required=True, translate=True)
     description = fields.Text(string='Description', required=False, translate=True)
 
+class EvaluationType(models.Model):
+    _name = 'ib.evaluationtype'
+    name = fields.Char(string='Name', required=True, translate=True)
+    description = fields.Text(string='Description', required=False, translate=True)
+
 # class crm-ccm(models.Model):
 #     _name = 'crm-ccm.crm-ccm'
 
