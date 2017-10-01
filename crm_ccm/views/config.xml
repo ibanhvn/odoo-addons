@@ -7,7 +7,7 @@
       <field name="arch" type="xml">
           <tree string="Configuration" editable="top">
               <field name="category" />
-              <field name="key" />
+              <field name="name" />
               <field name="value" />
               <field name="description" /> 
           </tree> 
@@ -21,7 +21,7 @@
                <sheet>
                   <group name="main">
                       <field name="category" />
-                      <field name="key" />
+                      <field name="name" />
                       <field name="value" />
                       <field name="description" /> 
                   </group> 
@@ -37,6 +37,6 @@
        <field name="view_mode">tree,form</field> 
     </record>
     <!-- menu items -->
-    <menuitem id="ib_config_list_menu" parent="ib_crm_ccm_menu" action="ib_config_action" sequence="10" />   
+    <menuitem id="ib_config_list_menu" parent="ib_crm_ccm_settings_menu" action="ib_config_action" sequence="10" />   
 </data>
 </openerp>

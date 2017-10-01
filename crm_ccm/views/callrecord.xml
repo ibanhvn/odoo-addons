@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+<data>
+    <record id="ib_callrecord_tree" model="ir.ui.view">
+      <field name="name">ib.callrecord.tree</field>
+      <field name="model">ib.callrecord</field>
+      <field name="arch" type="xml">
+          <tree string="Call Record" editable="top">
+              <field name="date" />
+              <field name="partner_id" />
+              <field name="user_id" />
+              <field name="time_id" domain="[('category','=','Khung thời gian')]"/>
+              <field name="out_going_call_id" domain="[('category','=','Phân loại cuộc gọi')]"/>
+              <field name="in_coming_call_id" domain="[('category','=','Phân loại cuộc gọi')]"/>
+              <field name="approach_type_id" domain="[('category','=','Hướng tiếp cận')]"/>
+              <field name="call_content" />
+              <field name="issues" />
+              <field name="resolve_method" />
+
+              <field name="result" />
+
+              <field name="approach_eval_id" domain="[('category','=','Đánh giá hướng tiếp cận')]"/>
+              <field name="customer_eval_id" domain="[('category','=','Đánh giá tổng hợp khách hàng')]"/>
+              
+              <field name="call_eval_id" domain="[('category','=','Hiệu quả cuộc gọi')]"/>
+
+              <field name="description" /> 
+              <field name="note" /> 
+          </tree> 
+        </field>
+    </record>
+    <record id="ib_config_form" model="ir.ui.view">
+        <field name="name">ib.callrecord.form</field>
+        <field name="model">ib.callrecord</field>
+        <field name="arch" type="xml">
+           <form string="Call Record">
+               <sheet>
+                  <group name="main">
+                      <field name="date" />
+                      <field name="partner_id" />
+                      <field name="user_id" />
+                      <field name="time_id" domain="[('category','=','Khung thời gian')]"/>
+                      <field name="out_going_call_id" domain="[('category','=','Phân loại cuộc gọi')]"/>
+                      <field name="in_coming_call_id" domain="[('category','=','Phân loại cuộc gọi')]"/>
+                      <field name="approach_type_id" domain="[('category','=','Hướng tiếp cận')]"/>
+                  </group>
+                  <group name="content">
+                    <field name="call_content" />
+                    <field name="issues" />
+                    <field name="resolve_method" />
+                  </group>
+                  <group name="result">
+                    <field name="result" />
+                  </group>
+                  <group name="eval">
+                    <field name="approach_eval_id" domain="[('category','=','Đánh giá hướng tiếp cận')]"/>
+                    <field name="customer_eval_id" domain="[('category','=','Đánh giá tổng hợp khách hàng')]"/>
+              
+                    <field name="call_eval_id" domain="[('category','=','Hiệu quả cuộc gọi')]"/>
+                  </group>
+                  <group name="desc">
+                    <field name="description" /> 
+                    <field name="note" />
+                  </group>
+               </sheet>
+           </form> 
+        </field> 
+    </record>
+    <!-- actions -->
+    <record id="ib_callrecord_action" model="ir.actions.act_window" >
+       <field name="name">Call Record</field>
+       <field name="res_model">ib.callrecord</field>
+       <field name="view_mode">tree,form</field> 
+    </record>
+
+    <!-- menu items -->
+    <menuitem id="ib_callrecord_list_menu" parent="ib_crm_ccm_menu" action="ib_callrecord_action"/>
+</data>
+</openerp>

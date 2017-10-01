@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<openerp>
-<data>
-    <!-- Settings/Technical/CRM - CCM -->
-    <menuitem id="ib_crm_ccm_menu" name="CRM - CCM" parent="base.menu_custom" sequence="1" />    
-</data>
-</openerp>

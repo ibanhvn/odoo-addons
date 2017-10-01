@@ -1,0 +1,48 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* crm_ccm
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c-20170207\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-01 18:17+0000\n"
+"PO-Revision-Date: 2017-10-01 18:17+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: crm_ccm
+#: model:ir.ui.menu,name:crm_ccm.ib_crm_ccm_menu
+#: model:ir.ui.menu,name:crm_ccm.ib_crm_ccm_settings_menu
+msgid "CRM - CCM"
+msgstr "Chăm sóc Khác Hàng - Tổng Đài"
+
+#. module: crm_ccm
+#: model:ir.actions.act_window,name:crm_ccm.ib_callrecord_action
+#: model:ir.ui.menu,name:crm_ccm.ib_callrecord_list_menu
+#: model:ir.ui.view,arch_db:crm_ccm.ib_callrecord_tree
+#: model:ir.ui.view,arch_db:crm_ccm.ib_config_form
+msgid "Call Record"
+msgstr "Cuộc Gọi"
+
+#. module: crm_ccm
+#: model:ir.actions.act_window,name:crm_ccm.ib_config_action
+#: model:ir.ui.menu,name:crm_ccm.ib_config_list_menu
+#: model:ir.ui.view,arch_db:crm_ccm.ib_config_tree
+msgid "Configuration"
+msgstr "Cấu hình"
+
+#. module: crm_ccm
+#: model:ir.model,name:crm_ccm.model_ib_callrecord
+msgid "Email Thread"
+msgstr "Email Thread"
+
+#. module: crm_ccm
+#: model:ir.model,name:crm_ccm.model_ib_config
+msgid "ib.config"
+msgstr "Cấu hình"
+
