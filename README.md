@@ -108,3 +108,12 @@ class CallType(models.Model):
     ],
 ```
 # Multiple languages
+- After app installation one can export transaltion file `crm-ccm.pot' for supporting different languages
+- Go to `Settings/Transaltions/Import - Export/Export Translation`
+- Select `CRM - CCM` in `Apps to Export`
+```sh
+i18n\
+     de.po
+     vi.po
+     ...
+```
