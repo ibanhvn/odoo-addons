@@ -13,7 +13,7 @@ docker exec -it --user root odoo bash
 ```
 ## Clone the repository
 
-```
+```sh
 git clone https://github.com/ibanhvn/odoo-addons.git
 ```
 # Create a new Odoo module
@@ -26,11 +26,20 @@ odoo.py scaffold crm-ccm odoo-addons
 ```
 ## Define module icon
 
-```
+```sh
 mkdir -p static/description
 # copy icon.png (200x200) to static/description
 # static/description/icon.png is applied as the module icon
 ```
 # Creat a new model
+- Define a simple model having name and description as the properties
+```python
+# -*- coding: utf-8 -*-
 
+from openerp import models, fields, api
 
+class CallType(models.Model):
+    _name = 'ib.calltype'
+    name = fields.Char()
+    description = fields.Text()
+```
