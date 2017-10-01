@@ -32,15 +32,13 @@ mkdir -p static/description
 # static/description/icon.png is applied as the module icon
 ```
 # Creat a new model
-- Define a simple model having name and description as the properties
+- Define a simple model
 ```python
-# -*- coding: utf-8 -*-
-
-from openerp import models, fields, api
-
-class CallType(models.Model):
-    _name = 'ib.calltype'
-    name = fields.Char(string='Name', required=True, translate=True)
+class Config(models.Model):
+    _name = 'ib.config'
+    category = fields.Char(string='Category', required=True, translate=True)
+    key = fields.Char(string='Key', required=True, translate=True)
+    value = fields.Char(string='Value', required=True, translate=True)
     description = fields.Text(string='Description', required=False, translate=True)
 ```
 - Define menu items, views and actions allowing user to create/update/delete `CallType`
@@ -54,55 +52,59 @@ class CallType(models.Model):
 </data>
 </openerp>
 ```
-- `views\calltype.xml`
+- `views\config.xml`
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <openerp>
 <data>
-    <record id="ib_calltype_tree" model="ir.ui.view">
-        <field name="name">ib.calltype.tree</field>
-        <field name="model">ib.calltype</field>
-        <field name="arch" type="xml">
-            <tree string="Call Type" editable="top">
-                <field name="name" />
-                <field name="description" />
-            </tree>
+    <record id="ib_config_tree" model="ir.ui.view">
+      <field name="name">ib.config.tree</field>
+      <field name="model">ib.config</field>
+      <field name="arch" type="xml">
+          <tree string="Configuration" editable="top">
+              <field name="category" />
+              <field name="key" />
+              <field name="value" />
+              <field name="description" /> 
+          </tree> 
         </field>
     </record>
-    <record id="ib_calltype_form" model="ir.ui.view">
-        <field name="name">ib.calltype.form</field>
-        <field name="model">ib.calltype</field>
+    <record id="ib_config_form" model="ir.ui.view">
+        <field name="name">ib.config.form</field>
+        <field name="model">ib.config</field>
         <field name="arch" type="xml">
-           <form string="Call Type">
+           <form string="Configuration">
                <sheet>
                   <group name="main">
-                      <field name="name" />
-                      <field name="description" />
-                  </group>
+                      <field name="category" />
+                      <field name="key" />
+                      <field name="value" />
+                      <field name="description" /> 
+                  </group> 
                </sheet>
-           </form>
-        </field>
+           </form> 
+        </field> 
     </record>
-
+    
     <!-- actions -->
-    <record id="ib_calltype_action" model="ir.actions.act_window" >
-       <field name="name">Call Type</field>
-       <field name="res_model">ib.calltype</field>
-       <field name="view_mode">tree,form</field>
+    <record id="ib_config_action" model="ir.actions.act_window" >
+       <field name="name">Configuration</field>
+       <field name="res_model">ib.config</field>
+       <field name="view_mode">tree,form</field> 
     </record>
     <!-- menu items -->
-    <menuitem id="ib_calltype_list_menu" parent="ib_crm_ccm_menu" action="ib_calltype_action" sequence="10" />
+    <menuitem id="ib_config_list_menu" parent="ib_crm_ccm_menu" action="ib_config_action" sequence="10" />   
 </data>
 </openerp>
 ```
-- Add `views/menus.xml` and `views/calltype.xml` to the module manifest
+- Add `views/menus.xml` and `views/config.xml` to the module manifest
 - `__openerp__.py`
 ```python
 # always loaded
     'data': [
         # 'security/ir.model.access.csv',
         'views/menus.xml',
-        'views/calltype.xml',
+        'views/config.xml',
         'views/views.xml',
         'views/templates.xml',
     ],
