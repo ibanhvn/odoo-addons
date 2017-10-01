@@ -43,3 +43,13 @@ class CallType(models.Model):
     name = fields.Char()
     description = fields.Text()
 ```
+- Define menu items and actions allowing user to create/update/delete `CallType`
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+    <!-- Settings/Techinical/CRM - CMM -->
+    <menuitem id="ib_crm_ccm_menu" name="CRM - CCM" parent="base.menu_custom" sequence="1" />
+</data>
+</openerp>
+```
