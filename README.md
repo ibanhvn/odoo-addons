@@ -102,7 +102,7 @@ class Config(models.Model):
 ```python
 # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
         'views/menus.xml',
         'views/config.xml',
         'views/views.xml',
@@ -120,9 +120,10 @@ i18n\
      vi.po
      ...
 ```
-# Custom Moduel for all users
+# Custom Module for all users
 - By default a custom module is only visible for admin user
 - To make the custom module accessible from different users you have to define a `security/ir.model.access.csv`
+- Then declare `security/ir.model.access.csv` in the module manifest
 ```csv
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_crm_ccm_callrecord_manager,access_ib_callrecord,model_ib_callrecord,,1,1,1,1
