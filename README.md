@@ -120,3 +120,11 @@ i18n\
      vi.po
      ...
 ```
+# Custom Moduel for all users
+- By default a custom module is only visible for admin user
+- To make the custom module accessible from different users you have to define a `security/ir.model.access.csv`
+```csv
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_crm_ccm_callrecord_manager,access_ib_callrecord,model_ib_callrecord,,1,1,1,1
+access_crm_ccm_config_manager,access_ib_config,model_ib_config,,1,1,1,1
+```
