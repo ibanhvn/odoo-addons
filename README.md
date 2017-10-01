@@ -40,8 +40,8 @@ from openerp import models, fields, api
 
 class CallType(models.Model):
     _name = 'ib.calltype'
-    name = fields.Char()
-    description = fields.Text()
+    name = fields.Char(string='Name', required=True, translate=True)
+    description = fields.Text(string='Description', required=False, translate=True)
 ```
 - Define menu items, views and actions allowing user to create/update/delete `CallType`
 - `views\menus.xml` 
@@ -107,3 +107,4 @@ class CallType(models.Model):
         'views/templates.xml',
     ],
 ```
+# Multiple languages
