@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c-20170207\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-01 18:17+0000\n"
-"PO-Revision-Date: 2017-10-01 18:17+0000\n"
+"POT-Creation-Date: 2017-10-02 02:08+0000\n"
+"PO-Revision-Date: 2017-10-02 02:08+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,18 +16,53 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: crm_ccm
+#: model:ir.ui.view,arch_db:crm_ccm.view_partner_form
+msgid "# Call records"
+msgstr "# Cuộc gọi"
+
+#. module: crm_ccm
+#: model:ir.ui.view,arch_db:crm_ccm.ib_config_form
+msgid "Approach eval."
+msgstr "Đánh giá hướng tiếp cận"
+
+#. module: crm_ccm
+#: model:ir.ui.view,arch_db:crm_ccm.ib_config_form
+msgid "Approach type"
+msgstr "Hướng tiếp cận"
+
+#. module: crm_ccm
 #: model:ir.ui.menu,name:crm_ccm.ib_crm_ccm_menu
 #: model:ir.ui.menu,name:crm_ccm.ib_crm_ccm_settings_menu
 msgid "CRM - CCM"
-msgstr "Chăm sóc Khác Hàng - Tổng Đài"
+msgstr "Chăm sóc KH - Tổng đài"
+
+#. module: crm_ccm
+#: model:ir.ui.view,arch_db:crm_ccm.ib_callrecord_tree
+#: model:ir.ui.view,arch_db:crm_ccm.ib_config_form
+msgid "Call Record"
+msgstr "Cuộc gọi"
+
+#. module: crm_ccm
+#: model:ir.ui.view,arch_db:crm_ccm.ib_config_form
+msgid "Call content"
+msgstr "Nội dung cuộc gọi"
+
+#. module: crm_ccm
+#: model:ir.ui.view,arch_db:crm_ccm.ib_config_form
+msgid "Call eval."
+msgstr "Đánh giá cuộc gọi"
 
 #. module: crm_ccm
 #: model:ir.actions.act_window,name:crm_ccm.ib_callrecord_action
 #: model:ir.ui.menu,name:crm_ccm.ib_callrecord_list_menu
-#: model:ir.ui.view,arch_db:crm_ccm.ib_callrecord_tree
-#: model:ir.ui.view,arch_db:crm_ccm.ib_config_form
-msgid "Call Record"
-msgstr "Cuộc Gọi"
+msgid "Call record"
+msgstr "Cuộc gọi"
+
+#. module: crm_ccm
+#: model:ir.model.fields,field_description:crm_ccm.field_ib_config_category
+#: model:ir.ui.view,arch_db:crm_ccm.ib_config_tree
+msgid "Category"
+msgstr "Chuyên mục"
 
 #. module: crm_ccm
 #: model:ir.actions.act_window,name:crm_ccm.ib_config_action
@@ -37,9 +72,145 @@ msgid "Configuration"
 msgstr "Cấu hình"
 
 #. module: crm_ccm
+#: model:ir.model.fields,field_description:crm_ccm.field_ib_config_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: crm_ccm
+#: model:ir.model.fields,field_description:crm_ccm.field_ib_config_create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: crm_ccm
+#: model:ir.ui.view,arch_db:crm_ccm.ib_config_form
+msgid "Customer eval."
+msgstr "Đánh giá khách hàng"
+
+#. module: crm_ccm
+#: model:ir.ui.view,arch_db:crm_ccm.ib_callrecord_tree
+#: model:ir.ui.view,arch_db:crm_ccm.ib_config_form
+msgid "Date"
+msgstr "Ngày tháng"
+
+#. module: crm_ccm
+#: model:ir.model.fields,field_description:crm_ccm.field_ib_config_description
+#: model:ir.ui.view,arch_db:crm_ccm.ib_config_form
+#: model:ir.ui.view,arch_db:crm_ccm.ib_config_tree
+msgid "Description"
+msgstr "Miêu tả"
+
+#. module: crm_ccm
+#: model:ir.model.fields,field_description:crm_ccm.field_ib_config_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: crm_ccm
+#: model:ir.ui.view,arch_db:crm_ccm.ib_callrecord_search
+msgid "Group by"
+msgstr "Group by"
+
+#. module: crm_ccm
+#: model:ir.model.fields,field_description:crm_ccm.field_ib_config_id
+msgid "ID"
+msgstr "ID"
+
+#. module: crm_ccm
+#: model:ir.ui.view,arch_db:crm_ccm.ib_config_form
+msgid "In coming call"
+msgstr "Cuộc gọi tới"
+
+#. module: crm_ccm
+#: model:ir.ui.view,arch_db:crm_ccm.ib_config_form
+msgid "Issues"
+msgstr "Vấn đề phát sinh"
+
+#. module: crm_ccm
+#: model:ir.model.fields,field_description:crm_ccm.field_ib_config___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: crm_ccm
+#: model:ir.model.fields,field_description:crm_ccm.field_ib_config_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: crm_ccm
+#: model:ir.model.fields,field_description:crm_ccm.field_ib_config_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: crm_ccm
+#: model:ir.ui.view,arch_db:crm_ccm.ib_callrecord_search
+msgid "Month"
+msgstr "Tháng"
+
+#. module: crm_ccm
+#: model:ir.model.fields,field_description:crm_ccm.field_ib_config_name
+#: model:ir.ui.view,arch_db:crm_ccm.ib_config_tree
+msgid "Name"
+msgstr "Tên"
+
+#. module: crm_ccm
+#: model:ir.ui.view,arch_db:crm_ccm.ib_config_form
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: crm_ccm
+#: model:ir.ui.view,arch_db:crm_ccm.ib_config_form
+msgid "Out going call"
+msgstr "Cuộc gọi đi"
+
+#. module: crm_ccm
+#: model:ir.model,name:crm_ccm.model_res_partner
+#: model:ir.ui.view,arch_db:crm_ccm.ib_callrecord_search
+#: model:ir.ui.view,arch_db:crm_ccm.ib_callrecord_tree
+#: model:ir.ui.view,arch_db:crm_ccm.ib_config_form
+msgid "Partner"
+msgstr "Khách hàng"
+
+#. module: crm_ccm
+#: model:ir.ui.view,arch_db:crm_ccm.ib_config_form
+msgid "Resovle method"
+msgstr "Hướng giải quyết"
+
+#. module: crm_ccm
+#: model:ir.ui.view,arch_db:crm_ccm.ib_callrecord_search
+#: model:ir.ui.view,arch_db:crm_ccm.ib_callrecord_tree
+#: model:ir.ui.view,arch_db:crm_ccm.ib_config_form
+msgid "Responsible"
+msgstr "Người phụ trách"
+
+#. module: crm_ccm
+#: model:ir.ui.view,arch_db:crm_ccm.ib_config_form
+msgid "Result"
+msgstr "Kết quả"
+
+#. module: crm_ccm
+#: model:ir.ui.view,arch_db:crm_ccm.ib_callrecord_search
+msgid "Search call record"
+msgstr "Tìm cuộc gọi"
+
+#. module: crm_ccm
+#: model:ir.ui.view,arch_db:crm_ccm.ib_callrecord_tree
+#: model:ir.ui.view,arch_db:crm_ccm.ib_config_form
+msgid "Time"
+msgstr "Khung thời gian"
+
+#. module: crm_ccm
+#: model:ir.model.fields,field_description:crm_ccm.field_ib_config_value
+#: model:ir.ui.view,arch_db:crm_ccm.ib_config_tree
+msgid "Value"
+msgstr "Giá trị"
+
+#. module: crm_ccm
+#: model:ir.ui.view,arch_db:crm_ccm.ib_callrecord_search
+msgid "date"
+msgstr "date"
+
+#. module: crm_ccm
 #: model:ir.model,name:crm_ccm.model_ib_callrecord
-msgid "Email Thread"
-msgstr "Email Thread"
+msgid "ib.callrecord"
+msgstr "Cuộc gọi"
 
 #. module: crm_ccm
 #: model:ir.model,name:crm_ccm.model_ib_config

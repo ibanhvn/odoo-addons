@@ -29,6 +29,7 @@
         'views/menus.xml',
         'views/config.xml',
         'views/callrecord.xml',
+        'views/res_partner.xml',
         'views/views.xml',
         'views/templates.xml',
     ],

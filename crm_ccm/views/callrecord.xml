@@ -6,26 +6,10 @@
       <field name="model">ib.callrecord</field>
       <field name="arch" type="xml">
           <tree string="Call Record" editable="top">
-              <field name="date" />
-              <field name="partner_id" />
-              <field name="user_id" />
-              <field name="time_id" domain="[('category','=','Khung thời gian')]"/>
-              <field name="out_going_call_id" domain="[('category','=','Phân loại cuộc gọi')]"/>
-              <field name="in_coming_call_id" domain="[('category','=','Phân loại cuộc gọi')]"/>
-              <field name="approach_type_id" domain="[('category','=','Hướng tiếp cận')]"/>
-              <field name="call_content" />
-              <field name="issues" />
-              <field name="resolve_method" />
-
-              <field name="result" />
-
-              <field name="approach_eval_id" domain="[('category','=','Đánh giá hướng tiếp cận')]"/>
-              <field name="customer_eval_id" domain="[('category','=','Đánh giá tổng hợp khách hàng')]"/>
-              
-              <field name="call_eval_id" domain="[('category','=','Hiệu quả cuộc gọi')]"/>
-
-              <field name="description" /> 
-              <field name="note" /> 
+              <field name="date" string="Date" />
+              <field name="partner_id" string="Partner" />
+              <field name="user_id" string="Responsible" />
+              <field name="time_id" string="Time" domain="[('category','=','Khung thời gian')]"/>
           </tree> 
         </field>
     </record>
@@ -36,39 +20,64 @@
            <form string="Call Record">
                <sheet>
                   <group name="main">
-                      <field name="date" />
-                      <field name="partner_id" />
-                      <field name="user_id" />
-                      <field name="time_id" domain="[('category','=','Khung thời gian')]"/>
-                      <field name="out_going_call_id" domain="[('category','=','Phân loại cuộc gọi')]"/>
-                      <field name="in_coming_call_id" domain="[('category','=','Phân loại cuộc gọi')]"/>
-                      <field name="approach_type_id" domain="[('category','=','Hướng tiếp cận')]"/>
+                      <field name="date" string="Date" />
+                      <field name="partner_id" string="Partner" />
+                      <field name="user_id" string="Responsible" />
+                      <field name="time_id" string="Time" domain="[('category','=','Khung thời gian')]"/>
+
+                      <field name="out_going_call_id" string="Out going call" domain="[('category','=','Phân loại cuộc gọi')]"/>
+                      <field name="in_coming_call_id" string="In coming call" domain="[('category','=','Phân loại cuộc gọi')]"/>
+                      <field name="approach_type_id" string="Approach type" domain="[('category','=','Hướng tiếp cận')]"/>
                   </group>
                   <group name="content">
-                    <field name="call_content" />
-                    <field name="issues" />
-                    <field name="resolve_method" />
+                    <field name="call_content" string="Call content" />
+                    <field name="issues" string="Issues" />
+                    <field name="resolve_method" string="Resovle method" />
                   </group>
                   <group name="result">
-                    <field name="result" />
+                    <field name="result" string="Result" />
                   </group>
                   <group name="eval">
-                    <field name="approach_eval_id" domain="[('category','=','Đánh giá hướng tiếp cận')]"/>
-                    <field name="customer_eval_id" domain="[('category','=','Đánh giá tổng hợp khách hàng')]"/>
-              
-                    <field name="call_eval_id" domain="[('category','=','Hiệu quả cuộc gọi')]"/>
+                    <field name="approach_eval_id" string="Approach eval." domain="[('category','=','Đánh giá hướng tiếp cận')]"/>
+                    <field name="customer_eval_id" string="Customer eval." domain="[('category','=','Đánh giá tổng hợp khách hàng')]"/>
+                    
+                    <field name="call_eval_id" string="Call eval." domain="[('category','=','Hiệu quả cuộc gọi')]"/>
                   </group>
                   <group name="desc">
-                    <field name="description" /> 
-                    <field name="note" />
+                    <field name="description" string="Description"/> 
+                    <field name="note" string="Note" />
                   </group>
                </sheet>
+               <!-- div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div-->
            </form> 
         </field> 
     </record>
+
+    <record id="ib_callrecord_search" model="ir.ui.view">
+        <field name="name">ib.callrecord.search</field>
+        <field name="model">ib.callrecord</field>
+        <field name="arch" type="xml">
+            <search string="Search call record">
+                <field name="date" string="date"/>
+                <field name="partner_id" operator="child_of"/>
+
+                <group string="Group by" name="groupby">
+                    <filter name="partner_groupby" string="Partner"
+                        context="{'group_by': 'partner_id'}"/>
+                    <filter name="user_groupby" string="Responsible"
+                        context="{'group_by': 'user_id'}"/>
+                    <filter name="date_groupby" string="Month"
+                        context="{'group_by': 'date'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
     <!-- actions -->
     <record id="ib_callrecord_action" model="ir.actions.act_window" >
-       <field name="name">Call Record</field>
+       <field name="name">Call record</field>
        <field name="res_model">ib.callrecord</field>
        <field name="view_mode">tree,form</field> 
     </record>
